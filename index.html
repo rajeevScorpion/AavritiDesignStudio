@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aavriti Design Studio</title>
+    <meta name="description" content="Aavriti Design Studio - Designing Human Centered Futures With Technology" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Space Mono', 'monospace'],
+            },
+            colors: {
+              brand: {
+                black: '#0A0A0A',
+                charcoal: '#121212',
+                surface: '#1E1E1E',
+                white: '#F0F0F0',
+                accent: '#3B82F6', // Electric Blue
+                neon: '#CCFF00', // Neon Lime
+                purple: '#A855F7',
+                gray: '#8E8E93',
+                lightGrid: '#E5E5E5',
+                darkGrid: '#262626',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              }
+            },
+            backgroundImage: {
+              'grid-pattern-light': "linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)",
+              'grid-pattern-dark': "linear-gradient(to right, #262626 1px, transparent 1px), linear-gradient(to bottom, #262626 1px, transparent 1px)",
+              'dot-pattern-light': "radial-gradient(#d4d4d4 1px, transparent 1px)",
+              'dot-pattern-dark': "radial-gradient(#333333 1px, transparent 1px)",
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        /* Background handled by main app container */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: none; /* Hide default cursor */
+      }
+      
+      .dark body {
+        color: #F0F0F0;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      /* Grid Backgrounds */
+      .bg-grid-light {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+      }
+      .dark .bg-grid-dark {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      }
+      
+      /* Interactive Cursor styles handled in component */
+      
+      /* Utilities */
+      .text-outline {
+        -webkit-text-stroke: 1px currentColor;
+        color: transparent;
+      }
+      
+      a, button {
+        cursor: none; /* Ensure all interactive elements hide default cursor */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-hash-link": "https://esm.sh/react-router-hash-link@^2.4.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
