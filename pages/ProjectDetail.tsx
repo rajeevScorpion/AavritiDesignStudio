@@ -87,10 +87,10 @@ const ProjectDetail: React.FC = () => {
         <ScrollReveal>
           <h2 className="text-3xl font-bold mb-6 text-brand-charcoal dark:text-white">Outcome & Impact</h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-12">{project.outcome}</p>
-          <div className="p-12 bg-brand-charcoal dark:bg-white/10 text-white rounded-lg border border-transparent dark:border-white/10 transition-colors duration-500">
-            <h3 className="text-2xl font-bold mb-4">Have a similar project?</h3>
-            <p className="text-gray-400 dark:text-gray-300 mb-8">Let's discuss how we can help you achieve similar results.</p>
-            <Button to="/contact" variant="secondary">Contact Us</Button>
+          <div className="p-12 bg-white dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 transition-colors duration-500 shadow-sm dark:shadow-none">
+            <h3 className="text-2xl font-bold mb-4 text-brand-charcoal dark:text-white">Have a similar project?</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">Let's discuss how we can help you achieve similar results.</p>
+            <Button to="/contact" variant="primary">Contact Us</Button>
           </div>
         </ScrollReveal>
       </section>
