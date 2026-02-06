@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import Button from './Button';
+import LogoLight from '/images/AavritiDesignStudio_logo_LightMode.png';
+import LogoDark from '/images/AavritiDesignStudio_logo_DarkMode.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,9 +80,17 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold tracking-tighter z-50 text-brand-charcoal dark:text-white flex items-center gap-3 group" data-cursor="hover">
-          <div className="w-3 h-3 bg-brand-accent dark:bg-brand-neon rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-          <span className="lowercase">aavriti design studio</span>
+        <Link
+          to="/"
+          className="z-50 flex items-center group"
+          data-cursor="hover"
+          aria-label="Return to home page"
+        >
+          <img
+            src={isDark ? LogoDark : LogoLight}
+            alt="Aavriti Design Studio"
+            className="h-9 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Menu */}

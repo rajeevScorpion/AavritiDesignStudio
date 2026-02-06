@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
+import LogoDark from '/images/AavritiDesignStudio_logo_DarkMode.png';
 
 const Footer: React.FC = () => {
   return (
@@ -7,7 +8,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
         <div className="md:col-span-8 flex flex-col justify-between h-full">
           <div>
-            <h2 className="text-2xl font-bold tracking-tighter mb-6 lowercase">aavriti design studio</h2>
+            <img
+              src={LogoDark}
+              alt="Aavriti Design Studio"
+              className="h-8 sm:h-10 w-auto mb-6"
+            />
             <p className="text-gray-400 max-w-sm mb-8">
               A creative engineering practice blending design, technology, and human innovation.
             </p>
